@@ -20,6 +20,7 @@ RUN apt-get update \
         python3-pip \
         python3-setuptools \
         sudo \
+        curl \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install jinja2 pygments
