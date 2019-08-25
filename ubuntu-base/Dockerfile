@@ -22,6 +22,6 @@ RUN apt-get update \
         sudo \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --user jinja2 pygments
+RUN pip3 install jinja2 pygments
 
 WORKDIR /
