@@ -23,6 +23,10 @@ RUN apt-get update \
         curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install jinja2 pygments
+RUN pip3 install jinja2 pygments wheel
+RUN pip3 install https://github.com/purduesigbots/pros-cli/releases/download/3.1.4/pros_cli_v5-3.1.4-py3-none-any.whl
+
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 
 WORKDIR /
