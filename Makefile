@@ -1,13 +1,13 @@
-UBUNTU=18.04
+UBUNTU=22.04
 
 usage:
 	@echo "Run make update, make build, and make push"
 
 update:
-	docker pull ubuntu:${UBUNTU}
+	podman pull ubuntu:${UBUNTU}
 
 build:
-	cd ubuntu-base && docker build -t okapilib/ubuntu-base:${UBUNTU} .
+	cd ubuntu-base && podman build -t okapilib/ubuntu-base:${UBUNTU} .
 
 push:
-	docker push okapilib/ubuntu-base:${UBUNTU}
+	podman push okapilib/ubuntu-base:${UBUNTU}
